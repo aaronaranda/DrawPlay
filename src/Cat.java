@@ -33,7 +33,9 @@ public class Cat {
 		int x=catX;
 		int y=catY;
 		// Draw the head
-		g2.setColor(Color.lightGray);
+		GradientPaint gp = new GradientPaint(75, 75, Color.white,
+				 95, 95, Color.gray, true);
+		g2.setPaint(gp);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
 		g2.setColor(Color.blue);
