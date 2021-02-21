@@ -38,14 +38,21 @@ public class Cat {
 		g2.setPaint(gp);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
-		g2.setColor(Color.blue);
+		GradientPaint gp1 = new GradientPaint(75, 75, Color.white,
+				 95, 95, Color.blue, true);
+		GradientPaint gp3 = new GradientPaint(75, 75, Color.white,
+				 95, 95, Color.green, true);
+		g2.setPaint(gp1);
 		x = catX + EYE_X; 
 		y = catY + EYE_Y;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
+		g2.setPaint(gp3);
 		x += EYE_SEPARATION;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		// Draw the mouth
-		g2.setColor(Color.red);
+		GradientPaint gp2 = new GradientPaint(75, 75, Color.white,
+				 95, 95, Color.red, true);
+		g2.setPaint(gp2);
 		x = catX + MOUTH_X;
 		y = catY + MOUTH_Y;
 		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
